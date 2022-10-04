@@ -1,0 +1,11 @@
+python run_loc.py \
+    --model_name=loc_fine_tuned_model.bin \
+    --output_dir=./saved_models \
+    --tokenizer_name=microsoft/codebert-base \
+    --model_name_or_path=microsoft/codebert-base \
+    --do_test \
+    --test_data_file=../data/cve_fixes_and_big_vul/test.csv \
+    --encoder_block_size 512 \
+    --vul_repair_block_size 256 \
+    --eval_batch_size 8 \
+    --seed 123456  2>&1
